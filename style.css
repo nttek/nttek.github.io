@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+
+    /* General Body Styling */
+    body {
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.8;
+        background-color: #F0F8FF;
+        color: #333;
+    }
+
+    /* Header Section */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        color: #ffdd57; /* Change color to match sections */
+        padding: 20px 40px;
+        text-align: center;
+    }
+    header img {
+        width: 120px;
+        height: auto;
+        margin-right: 20px;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8em;
+        font-weight: bold;
+        text-align: center;
+        flex-grow: 1;
+        color: #c8a105; /* Same color as section titles */
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    /* Navigation Bar */
+    nav {
+        background: #ffdd57;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+        color: #000;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #c8a105;
+    }
+
+    nav select {
+        margin-left: auto;
+        padding: 5px;
+        font-size: 1.1em;
+        border: none;
+        background: #000;
+        color: #333;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Mobile Navigation */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            display: none;
+            flex-direction: column;
+            background: #ffdd57;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+        }
+        .menu.active {
+            display: flex;
+        }
+        .menu-toggle {
+            display: flex;
+        }
+        header h1 {
+            font-size: 1.5em; /* Smaller title for mobile */
+        }
+    }
+
+    /* Section Styling */
+    section {
+        padding: 50px 20px;
+        margin: 20px auto;
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        max-width: 900px;
+    }
+    h2 {
+        color: #c8a105;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* Worship Section */
+    #worship {
+        padding: 50px 20px;
+        background: #ffffff;
+        overflow: hidden;
+    }
+    #worship h2 {
+        margin-bottom: 20px;
+    }
+    #worship .worship-gallery {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+    #worship img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.5s ease;
+    }
+    #worship img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+        background: #ffdd57;
+        color: #4a2020;
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 40px;
+        font-size: 1em;
+    }
+    footer a {
+        color: #4a2020;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Back-to-Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #0073e6;
+        color: #000;
+        padding: 10px 15px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .back-to-top:hover {
+        background: #005bb5;
+    }
+
+    /* Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
